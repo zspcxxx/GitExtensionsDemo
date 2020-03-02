@@ -49,35 +49,6 @@ func comparTime() (response HistrDataTime, flag bool) {
 	return response, false
 }
 
-func topicCheck() {
-	tmptopicMap = make(map[string]int64)
-	DIDcount = 0
-	t := time.NewTimer(5 * time.Minute)
-	//t := time.NewTimer(15 * time.Second)   //for debug
-	for {
-		select {
-		case <-t.C:
-			err := readLatestAddDevice(&DIDcount)
-			if err != nil{
-				log.ErrorS("topicCheck", "readLatestAddDevice", err)
-			}
-			for k := range topicMap{
-				for m := range tmptopicMap{
-					if strings.Compare(k, m) == 0 {
-						tmpDid := tmptopicMap[m]
-						addTopicMap(m, tmpDid)
-						subscribeTopic0(m)
-					}
-				}
-			}
-			for n := range tmptopicMap {
-				delete(tmptopicMap, n)
-			}
-			t.Reset(5 * time.Minute)
-			//t.Reset(15 * time.Second)  //for debug
-		}
-	}
-}
 
 var onLost MQTT.ConnectionLostHandler = func(client MQTT.Client, e error) {
 	log.ErrorS("MqttClient", "onLost", e)
