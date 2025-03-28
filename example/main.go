@@ -14,8 +14,8 @@ func main()  {
 	//data1 := "{\"DeviceType\":\"TH-CFA600L\", \"DeviceSN\":\"B0F89315BFAE\", \"DeviceID\":15}"
 	//data1 := "{\"Topic\":\"TELLHOW/TH-S100L/ACCF23E1C8A7/TEST\", \"Payload\":\"Mqtt Pub test!\"}"
 	data1 := "TELLHOW/TH-CFA600L/B0F89315BFAE/SET"
-	//data2 := "{\"ver\":1,\"tp\":21,\"data\":[{\"m\":\"FANFREQ\",\"v\":25,\"p\":3}],\"controlFrom\":\"ionic@test3@1531744313792@4032\"}"
-	//data2 := "{\\\"ver\\\":1,\\\"tp\\\":21,\\\"data\\\":[{\\\"m\\\":\\\"FANFREQ\\\",\\\"v\\\":25,\\\"p\\\":3}],\\\"controlFrom\\\":\\\"ionic@test3@1531744313792@4032\\\"}"
+	data2 := "{\"ver\":1,\"tp\":21,\"data\":[{\"m\":\"FANFREQ\",\"v\":25,\"p\":3}],\"controlFrom\":\"ionic@test3@1531744313792@4032\"}"
+	data2 := "{\\\"ver\\\":1,\\\"tp\\\":21,\\\"data\\\":[{\\\"m\\\":\\\"FANFREQ\\\",\\\"v\\\":25,\\\"p\\\":3}],\\\"controlFrom\\\":\\\"ionic@test3@1531744313792@4032\\\"}"
 	data2 := "{\\\"Ver\\\":1,\\\"Tp\\\":21,\\\"Data\\\":[{\\\"M\\\":\\\"FANFREQ\\\",\\\"V\\\":25,\\\"P\\\":3}],\\\"ControlFrom\\\":\\\"ionic@test3@1531744313792@4032\\\"}"
 
 	Data := fmt.Sprintf("{\"Topic\":\"%s\",\"Payload\":\"%s\"}", data1, data2)
