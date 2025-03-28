@@ -1,0 +1,8 @@
+[submodule "submodule_test/modules1"]
+	path = submodule_test/modules1
+	url = git@github.com:zspcxxx/GitExtensionsDemo.git
+	branch = branch2
+[submodule "submodule_test/modules2"]
+	path = submodule_test/modules2
+	url = git@github.com:zspcxxx/GitExtensionsDemo.git
+	branch = branch2
